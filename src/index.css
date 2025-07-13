@@ -1,0 +1,257 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+/* Modern Portfolio Design System - Cybersecurity Theme */
+
+@layer base {
+  :root {
+    /* Cybersecurity-inspired color palette */
+    --background: 0 0% 100%;
+    --foreground: 215 28% 17%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 28% 17%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 17%;
+
+    /* Deep tech blue primary */
+    --primary: 220 91% 20%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 220 91% 35%;
+
+    /* Subtle light backgrounds */
+    --secondary: 210 20% 98%;
+    --secondary-foreground: 215 28% 17%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Cyan tech accent */
+    --accent: 189 94% 43%;
+    --accent-foreground: 0 0% 98%;
+    --accent-glow: 189 94% 55%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 220 91% 20%;
+
+    /* Custom design tokens */
+    --tech-blue: 220 91% 20%;
+    --cyber-cyan: 189 94% 43%;
+    --dark-surface: 215 28% 17%;
+    --glass-bg: 0 0% 100% / 0.05;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 91% 20%), hsl(220 91% 35%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 91% 20%) 0%, hsl(189 94% 43%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 20% 98%));
+    --gradient-accent: linear-gradient(90deg, hsl(189 94% 43%), hsl(220 91% 35%));
+    
+    /* Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(220 91% 20% / 0.1);
+    --shadow-glow: 0 0 40px hsl(189 94% 43% / 0.15);
+    --shadow-card: 0 4px 20px -4px hsl(220 91% 20% / 0.08);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode with cybersecurity aesthetics */
+    --background: 215 28% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 215 28% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 215 28% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 189 94% 43%;
+    --primary-foreground: 215 28% 8%;
+    --primary-glow: 189 94% 55%;
+
+    --secondary: 215 28% 12%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 215 28% 12%;
+    --muted-foreground: 215 16% 65%;
+
+    --accent: 220 91% 35%;
+    --accent-foreground: 0 0% 98%;
+    --accent-glow: 220 91% 50%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 215 28% 18%;
+    --input: 215 28% 18%;
+    --ring: 189 94% 43%;
+
+    /* Dark mode custom tokens */
+    --tech-blue: 220 91% 35%;
+    --cyber-cyan: 189 94% 43%;
+    --dark-surface: 215 28% 10%;
+    --glass-bg: 0 0% 100% / 0.02;
+    
+    /* Dark gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(215 28% 8%), hsl(215 28% 12%));
+    --gradient-hero: linear-gradient(135deg, hsl(215 28% 8%) 0%, hsl(220 91% 15%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(215 28% 10%), hsl(215 28% 12%));
+    --gradient-accent: linear-gradient(90deg, hsl(189 94% 43%), hsl(220 91% 35%));
+    
+    /* Dark shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(0 0% 0% / 0.3);
+    --shadow-glow: 0 0 40px hsl(189 94% 43% / 0.2);
+    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.25);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Hero Section */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .hero-text {
+    @apply text-4xl md:text-6xl font-bold bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent;
+  }
+
+  /* Glass morphism effect */
+  .glass-card {
+    @apply backdrop-blur-md border border-white/10;
+    background: var(--glass-bg);
+    box-shadow: var(--shadow-elegant);
+  }
+
+  /* Animated button */
+  .btn-cyber {
+    @apply relative px-8 py-4 font-semibold rounded-lg transition-all duration-300;
+    background: var(--gradient-accent);
+    box-shadow: var(--shadow-glow);
+  }
+
+  .btn-cyber:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow), 0 10px 25px -5px hsl(var(--accent) / 0.4);
+  }
+
+  /* Project card */
+  .project-card {
+    @apply bg-card border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg;
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-card);
+  }
+
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-elegant);
+  }
+
+  /* Skill badge */
+  .skill-badge {
+    @apply px-4 py-2 rounded-full font-medium transition-all duration-300;
+    background: var(--gradient-accent);
+    color: hsl(var(--accent-foreground));
+  }
+
+  .skill-badge:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Animated underline */
+  .animate-underline {
+    @apply relative;
+  }
+
+  .animate-underline::after {
+    @apply absolute left-0 bottom-0 w-0 h-0.5 bg-accent transition-all duration-300;
+    content: '';
+  }
+
+  .animate-underline:hover::after {
+    @apply w-full;
+  }
+
+  /* Floating animation */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  /* Fade in animation */
+  .fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Tech grid pattern */
+  .tech-grid {
+    background-image: 
+      radial-gradient(circle at 1px 1px, hsl(var(--accent) / 0.15) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+}
