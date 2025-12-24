@@ -8,7 +8,7 @@ const About = () => {
       institution: "Garden City University, Bengaluru",
       grade: "CGPA: 8.0",
       note: "Top 15% of batch",
-      year: "2022-2025"
+      year: "2022-2026"
     },
     {
       degree: "12th Grade",
@@ -24,6 +24,7 @@ const About = () => {
       year: "2020"
     }
   ];
+  
 
   return (
     <section id="about" className="py-20 bg-secondary/30">
@@ -45,15 +46,22 @@ const About = () => {
               
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Over the past few years, I've built secure applications, contributed to ML-based 
-                tools, and earned more than 10 certifications in cybersecurity, cloud, AI/ML, 
+                tools, and earned more than 20 certifications in cybersecurity, cloud, AI/ML, 
                 and networking. I'm passionate about learning and applying emerging technologies 
                 in real-world projects and hackathons.
               </p>
 
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                I completed a 3-month cybersecurity internship as a Cyber security research and 
+                development intern, working with forensic tools and real-world security projects 
+                that enhanced my skills in security practices and vulnerability analysis.
+              </p>
+
+
               <div className="flex flex-wrap gap-4 pt-4">
                 <div className="flex items-center gap-2 text-accent">
                   <Award className="h-5 w-5" />
-                  <span className="font-medium">10+ Certifications</span>
+                  <span className="font-medium">20+ Certifications</span>
                 </div>
                 <div className="flex items-center gap-2 text-accent">
                   <TrendingUp className="h-5 w-5" />
@@ -97,7 +105,7 @@ const About = () => {
           <div className="mt-16 text-center fade-in">
             <h3 className="text-2xl font-semibold mb-8">Interests & Hobbies</h3>
             <div className="flex flex-wrap justify-center gap-4">
-              {[ 'Ethical Hacking','Astronomy & Space Tech', 'Hackathons'].map((interest) => (
+              {[ 'Ethical Hacking','Space Tech', 'Hackathons', 'Gaming'].map((interest) => (
                 <span key={interest} className="skill-badge">
                   {interest}
                 </span>

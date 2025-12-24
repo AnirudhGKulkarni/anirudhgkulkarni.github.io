@@ -1,10 +1,13 @@
 import { ArrowDown, Github, Linkedin, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/hero-bg.jpg';
+import Experience from "./Experience";
+
+
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
       {/* Background */}
       <div className="absolute inset-0">
         <img 
@@ -22,7 +25,13 @@ const Hero = () => {
           {/* Profile Image Placeholder */}
           <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-accent to-primary p-1 float">
             <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
-              <span className="text-4xl font-bold text-foreground">ANI</span>
+              {/* <span className="text-4xl font-bold text-foreground">͓̽ANI</span> */}
+              <img 
+  src="/myphoto.jpg" 
+  alt="Anirudh Kulkarni" 
+  className="w-32 h-32 rounded-full mx-auto shadow-lg object-contain bg-white border-4 border-acqa-500"
+/>
+
             </div>
           </div>
 
@@ -31,11 +40,11 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-foreground/90 font-medium">
-            Cybersecurity Enthusiast | Developer | Tech Explorer
+            Cybersecurity Enthusiast | Tech Explorer | Gamer
           </p>
           
           <p className="text-lg text-foreground/80 max-w-2xl mx-auto leading-relaxed">
-            I'm a 7th-semester B.Tech student in Computer Science (Cybersecurity) passionate about 
+            I'm a 8th-semester B.Tech student in Computer Science (Cybersecurity) passionate about 
             building secure, scalable, and impactful software. With hands-on experience in Python, 
             Java, ML, and web development, I love solving real-world problems through technology.
           </p>
@@ -50,7 +59,7 @@ const Hero = () => {
             </Button>
             
             <div className="flex gap-4">
-              <Button variant="outline" size="icon" className="glass-card hover:scale-110 transition-transform">
+              <Button variant="outline" size="icon" className="glass-card hover:scale-110 transition-transform" asChild>
                 <a href="https://github.com/AnirudhGKulkarni" target="_blank" rel="noopener noreferrer">
                   <Github className="h-5 w-5" />
                 </a>

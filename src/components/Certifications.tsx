@@ -187,7 +187,8 @@ const Certifications = () => {
       certifications: [
         "Introduction to Cybersecurity (Cisco)",
         "Junior Cyber Security Analyst (Cisco)",
-        "Network Support and Security (Cisco)"
+        "Network Support and Security (Cisco)",
+        "Ethical Hacking and Pentest (Udemy)"
       ]
     },
     {
@@ -315,7 +316,9 @@ const Certifications = () => {
           </div>
 
           {/* Stats Grid */}
-          <div className="grid md:grid-cols-4 gap-6 mt-16 fade-in">
+          {/* <div className="grid md:grid-cols-4 gap-6 mt-16 fade-in"> */}
+          <div className="grid md:grid-cols-3 gap-6 mt-16 fade-in">
+
             <div className="text-center p-6 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20">
               <div className="text-3xl font-bold text-primary mb-2">{totalCertifications}</div>
               <div className="text-muted-foreground">Total Certifications</div>
@@ -324,10 +327,7 @@ const Certifications = () => {
               <div className="text-3xl font-bold text-accent mb-2">5</div>
               <div className="text-muted-foreground">Skill Domains</div>
             </div>
-            <div className="text-center p-6 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20">
-              <div className="text-3xl font-bold text-primary mb-2">3</div>
-              <div className="text-muted-foreground">Industry Partners</div>
-            </div>
+            
             <div className="text-center p-6 rounded-lg bg-gradient-to-br from-accent/10 to-primary/10 border border-accent/20">
               <div className="text-3xl font-bold text-accent mb-2">100%</div>
               <div className="text-muted-foreground">Completion Rate</div>

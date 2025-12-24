@@ -33,7 +33,7 @@ const Projects = () => {
       description: "Comprehensive inventory management solution built with Java and MySQL, streamlining pharmacy operations and reducing manual errors.",
       icon: Database,
       achievements: [
-        "Managed 500+ inventory items (SKUs)",
+        "Managed 200+ inventory items (SKUs)",
         "30% improvement in tracking accuracy",
         "80% reduction in manual errors",
         "Automated billing and reporting"

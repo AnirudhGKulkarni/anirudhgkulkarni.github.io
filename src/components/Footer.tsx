@@ -21,7 +21,7 @@ const Footer = () => {
                 Cybersecurity enthusiast, passionate about building secure, 
                 innovative solutions that make a difference.
               </p>
-              <div className="flex gap-4">
+              {/* <div className="flex gap-4">
                 <Button variant="ghost" size="icon" className="hover:text-accent transition-colors">
                   <a href="https://github.com/AnirudhGKulkarni" target="_blank" rel="noopener noreferrer">
                     <Github className="h-5 w-5" />
@@ -37,14 +37,42 @@ const Footer = () => {
                     <Mail className="h-5 w-5" />
                   </a>
                 </Button>
-              </div>
-            </div>
+              </div>*/}
+             
+
+
+            <div className="flex gap-4">
+  <a
+    href="https://github.com/AnirudhGKulkarni"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="p-2 rounded-full hover:bg-accent hover:text-background transition-colors"
+  >
+    <Github className="h-5 w-5" />
+  </a>
+  <a
+    href="https://www.linkedin.com/in/anirudha-g-kulkarni-16381835b"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="p-2 rounded-full hover:bg-accent hover:text-background transition-colors"
+  >
+    <Linkedin className="h-5 w-5" />
+  </a>
+  <a
+    href="mailto:anigk22@gmail.com"
+    className="p-2 rounded-full hover:bg-accent hover:text-background transition-colors"
+  >
+    <Mail className="h-5 w-5" />
+  </a>
+</div>
+</div>
+
 
             {/* Quick Links */}
             <div className="space-y-4">
               <h3 className="font-semibold text-foreground">Quick Links</h3>
               <div className="space-y-2">
-                {['About', 'Skills', 'Projects', 'Certifications', 'Contact'].map((link) => (
+                {['About', 'Skills', 'Projects', 'Experience','Certifications', 'Achievements', 'Contact'].map((link) => (
                   <a
                     key={link}
                     href={`#${link.toLowerCase()}`}
@@ -73,9 +101,9 @@ const Footer = () => {
           {/* Bottom Footer */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2 text-muted-foreground">
-              <span>© 2025 Anirudha G Kulkarni. Made with</span>
-              <Heart className="h-4 w-4 text-red-500 fill-current" />
-              <span>and lots of ☕</span>
+              <span>Anirudha G Kulkarni. Built with passion and purpose</span>
+              {/* <Heart className="h-4 w-4 text-red-500 fill-current" />
+              <span>and lots of ☕</span> */}
             </div>
 
             {/* Back to Top */}

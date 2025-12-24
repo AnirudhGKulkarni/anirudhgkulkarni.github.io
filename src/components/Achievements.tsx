@@ -49,7 +49,7 @@ const Achievements = () => {
         "8.0 CGPA maintenance",
         "Top 15% class ranking",
         "Top 10 scorer in 10th boards (89.12%)",
-        "Academic consistency across semesters"
+        "Academic consistency across semesters by maintaing 9.0+ CGPA for most of the semesters"
       ],
       color: "from-green-500 to-teal-500",
       bgColor: "from-green-500/10 to-teal-500/10"
@@ -61,7 +61,7 @@ const Achievements = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 fade-in">
-            <h2 className="text-4xl font-bold mb-4 text-foreground">Achievements & Recognition</h2>
+            <h2 className="text-4xl font-bold mb-4 text-foreground">Achievements</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto"></div>
             <p className="text-lg text-muted-foreground mt-6 max-w-2xl mx-auto">
               Academic excellence, research contributions, and technical accomplishments

@@ -1,129 +1,7 @@
-import { useState } from 'react';
-import { Mail, Phone, Linkedin, Github, Send, MapPin } from 'lucide-react';
+import { Mail, Phone, Linkedin, Github, MapPin } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  const { toast } = useToast();
-
-   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Here you would typically send the form data to a backend service
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon!",
-    });
-    setFormData({ name: '', email: '', subject: '', message: '' });
-   };
-
-//   <form
-//   action="https://formspree.io/f/manbweqb"
-//   method="POST">
-//    {/* className="space-y-6"> */}
-//   <div className="grid md:grid-cols-2 gap-4">
-//     <div className="space-y-2">
-//       <Label htmlFor="name">Name</Label>
-//       <Input
-//         id="name"
-//         name="name"
-//         type="text"
-//         placeholder="Your name"
-//         required
-//       />
-//     </div>
-//     <div className="space-y-2">
-//       <Label htmlFor="email">Email</Label>
-//       <Input
-//         id="email"
-//         name="email"
-//         type="email"
-//         placeholder="your.email@example.com"
-//         required
-//       />
-//     </div>
-//   </div>
-
-//   <div className="space-y-2">
-//     <Label htmlFor="subject">Subject</Label>
-//     <Input
-//       id="subject"
-//       name="subject"
-//       type="text"
-//       placeholder="What's this about?"
-//       required
-//     />
-//   </div>
-
-//   <div className="space-y-2">
-//     <Label htmlFor="message">Message</Label>
-//     <Textarea
-//       id="message"
-//       name="message"
-//       placeholder="Tell me about your project or idea..."
-//       rows={6}
-//       required
-//     />
-//   </div>
-
-//   <Button type="submit" className="w-full btn-cyber group">
-//     <Send className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform" />
-//     Send Message
-//   </Button>
-// </form>
-
-
-
-<form
-  action="https://formspree.io/f/manbweqb"
-  method="POST"
-  className="space-y-6"
->
-  <div className="grid md:grid-cols-2 gap-4">
-    <div className="space-y-2">
-      <Label htmlFor="name">Name</Label>
-      <Input id="name" name="name" type="text" placeholder="Your name" required />
-    </div>
-    <div className="space-y-2">
-      <Label htmlFor="email">Email</Label>
-      <Input id="email" name="email" type="email" placeholder="your.email@example.com" required />
-    </div>
-  </div>
-
-  <div className="space-y-2">
-    <Label htmlFor="subject">Subject</Label>
-    <Input id="subject" name="subject" type="text" placeholder="What's this about?" required />
-  </div>
-
-  <div className="space-y-2">
-    <Label htmlFor="message">Message</Label>
-    <Textarea id="message" name="message" placeholder="Tell me about your project or idea..." rows={6} required />
-  </div>
-
-  <Button type="submit" className="w-full btn-cyber group">
-    <Send className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform" />
-    Send Message
-  </Button>
-</form>
-
-
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
-  };
-
   const contactInfo = [
     {
       icon: Mail,
@@ -167,15 +45,15 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Information */}
-            <div className="space-y-8 fade-in">
+          {/* Centered Contact Info Section */}
+          <div className="flex justify-center">
+            <div className="max-w-2xl w-full space-y-8 fade-in">
               <div>
                 <h3 className="text-2xl font-semibold mb-6 text-foreground">Looking for an Internship</h3>
                 <p className="text-muted-foreground leading-relaxed mb-8">
                   As a dedicated aspiring engineer with a growing interest in cybersecurity, I'm seeking internship opportunities to apply my skills and contribute to real-world projects.
                 </p>
-                
+
                 <div className="flex items-center gap-2 text-muted-foreground mb-6">
                   <MapPin className="h-5 w-5 text-accent" />
                   <span>Bengaluru, Karnataka, India</span>
@@ -205,81 +83,8 @@ const Contact = () => {
                 ))}
               </div>
             </div>
-
-            {/* Contact Form */}
-            <div className="fade-in">
-              <Card className="project-card">
-                <CardContent className="p-6">
-                  <h3 className="text-2xl font-semibold mb-6 text-foreground">Send a Message</h3>
-                  
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="name">Name</Label>
-                        <Input
-                          id="name"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleChange}
-                          placeholder="Your name"
-                          required
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="email">Email</Label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          placeholder="your.email@example.com"
-                          required
-                        />
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <Label htmlFor="subject">Subject</Label>
-                      <Input
-                        id="subject"
-                        name="subject"
-                        value={formData.subject}
-                        onChange={handleChange}
-                        placeholder="What's this about?"
-                        required
-                      />
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <Label htmlFor="message">Message</Label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        placeholder="Type your message here..."
-                        rows={6}
-                        required
-                      />
-                    </div>
-                    
-                    <Button type="submit" className="w-full btn-cyber group">
-                      <Send className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform" />
-                      Send Message
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
-
-              {/* Quick Response Promise */}
-              {/* <div className="mt-6 p-4 rounded-lg bg-gradient-to-r from-accent/10 to-primary/10 border border-accent/20">
-                <p className="text-sm text-foreground text-center">
-                  <span className="font-semibold text-accent">Quick Response Promise:</span> I typically respond within 24 hours!
-                </p>
-              </div> */}
-            </div>
           </div>
+
         </div>
       </div>
     </section>
