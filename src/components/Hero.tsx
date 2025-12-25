@@ -1,4 +1,4 @@
-import { ArrowDown, Github, Linkedin, Download } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Download, Eye } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/hero-bg.jpg';
 import Experience from "./Experience";
@@ -51,10 +51,10 @@ const Hero = () => {
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-            <Button className="btn-cyber group" asChild>
-              <a href="/resume.pdf" download="Anirudha_G_Kulkarni_Resume.pdf">
-                <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-                Download Resume
+            <Button variant="outline" className="btn-cyber view-resume group" asChild>
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                <Eye className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                View Resume
               </a>
             </Button>
             

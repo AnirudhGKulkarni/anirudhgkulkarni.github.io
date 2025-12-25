@@ -264,55 +264,58 @@ const Certifications = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {certificationCategories.map((category, index) => (
-              <Card key={index} className="project-card group overflow-hidden">
-                <CardContent className="p-6">
-                  <div className="text-center mb-6">
-                    <div className={`w-16 h-16 mx-auto rounded-full bg-gradient-to-r ${category.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                      <category.icon className="h-8 w-8 text-white" />
+            {certificationCategories.map((category, index) => {
+              const Icon = category.icon;
+              return (
+                <Card key={index} className="project-card group overflow-hidden">
+                  <CardContent className="p-6">
+                    <div className="text-center mb-6">
+                      <div className={`w-16 h-16 mx-auto rounded-full bg-gradient-to-r ${category.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                        <Icon className="h-8 w-8 text-white" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-foreground group-hover:text-accent transition-colors">
+                        {category.title}
+                      </h3>
                     </div>
-                    <h3 className="text-xl font-semibold text-foreground group-hover:text-accent transition-colors">
-                      {category.title}
-                    </h3>
-                  </div>
 
-                  <div className="space-y-3">
-                    {category.certifications.map((cert, certIndex) => {
-                      const match = cert.match(/(.*)\s\(([^)]+)\)/);
-                      const title = match ? match[1] : cert;
-                      const provider = match ? match[2] : null;
+                    <div className="space-y-3">
+                      {category.certifications.map((cert, certIndex) => {
+                        const match = cert.match(/(.*)\s\(([^)]+)\)/);
+                        const title = match ? match[1] : cert;
+                        const provider = match ? match[2] : null;
 
-                      return (
-                        <div key={certIndex} className="group/cert">
-                          <div className="p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors border border-border group-hover/cert:border-accent/50">
-                            <div className="flex items-start gap-3">
-                              <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                              <span className="text-sm text-foreground leading-relaxed">
-                                {title}
-                                {provider && (
-                                  <>
-                                    <br />
-                                    <span className="text-xs text-muted-foreground">
-                                      {provider}
-                                    </span>
-                                  </>
-                                )}
-                              </span>
+                        return (
+                          <div key={certIndex} className="group/cert">
+                            <div className="p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors border border-border group-hover/cert:border-accent/50">
+                              <div className="flex items-start gap-3">
+                                <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                                <span className="text-sm text-foreground leading-relaxed">
+                                  {title}
+                                  {provider && (
+                                    <>
+                                      <br />
+                                      <span className="text-xs text-muted-foreground">
+                                        {provider}
+                                      </span>
+                                    </>
+                                  )}
+                                </span>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      );
-                    })}
-                  </div>
+                        );
+                      })}
+                    </div>
 
-                  <div className="mt-4 text-center">
-                    <Badge variant="outline" className="text-xs">
-                      {category.certifications.length} Certificate{category.certifications.length > 1 ? 's' : ''}
-                    </Badge>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                    <div className="mt-4 text-center">
+                      <Badge variant="outline" className="text-xs">
+                        {category.certifications.length} Certificate{category.certifications.length > 1 ? 's' : ''}
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
 
           {/* Stats Grid */}
