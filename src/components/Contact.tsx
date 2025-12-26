@@ -47,11 +47,11 @@ const Contact = () => {
 
           {/* Centered Contact Info Section */}
           <div className="flex justify-center">
-            <div className="max-w-2xl w-full space-y-8 fade-in">
+            <div className="max-w-4xl w-full space-y-8 fade-in">
               <div>
-                <h3 className="text-2xl font-semibold mb-6 text-foreground">Looking for an Internship</h3>
+                <h3 className="text-2xl font-semibold mb-6 text-foreground">Looking for Internship and Job Opportunities</h3>
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  As a dedicated aspiring engineer with a growing interest in cybersecurity, I'm seeking internship opportunities to apply my skills and contribute to real-world projects.
+                  As a dedicated aspiring engineer with a growing interest in cybersecurity, I'm seeking internship and job opportunities to apply my skills and contribute to real-world projects.
                 </p>
 
                 <div className="flex items-center gap-2 text-muted-foreground mb-6">
@@ -60,7 +60,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="grid gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-stretch">
                 {contactInfo.map((contact, index) => (
                   <Card key={index} className="project-card group">
                     <CardContent className="p-4">

@@ -29,14 +29,13 @@ const Achievements = () => {
       bgColor: "from-blue-500/10 to-purple-500/10"
     },
     {
-      title: "IoT in Space Exploration",
+      title: "Technical Talk on Space Exploration",
       icon: Rocket,
-      description: "Conducted seminar on IoT applications in space exploration, covering India's Chandrayaan missions",
+      description: "Conducted seminar on 'IoT applications in Space Exploration', covering India's Chandrayaan missions and 'Threat Hunting in Space Tech'",
       highlights: [
-        "Space technology expertise",
         "Analysis of India's Chandrayaan-1, Chandrayaan-2, and Chandrayaan-3 missions",
-        "IoT applications in aerospace"
-        
+        "IoT applications in aerospace",
+        "Threat hunting in space technology"
       ],
       color: "from-indigo-500 to-cyan-500",
       bgColor: "from-indigo-500/10 to-cyan-500/10"

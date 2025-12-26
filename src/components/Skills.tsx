@@ -12,13 +12,19 @@ const Skills = () => {
     {
       title: "Tools & Platforms", 
       icon: Database,
-      skills: ["VMware", "Git", "MySQL", "Flask", "Jupyter Notebook"],
+      skills: ["VMware", "Virtual Box", "Git", "MySQL", "Jupyter Notebook"],
       color: "text-green-500"
     },
     {
       title: "Technologies",
       icon: Shield,
-      skills: ["Machine Learning", "Data Analysis", "Full-stack Web Development"],
+      skills: ["Machine Learning", "Data Analysis", "Full-stack Web Development", "Firebase"],
+      color: "text-purple-500"
+    },
+    {
+      title: "Security Concepts",
+      icon: Shield,
+      skills: ["Authentication", "Authorization", "Access Control", "Secure Web Applications"],
       color: "text-purple-500"
     },
     {

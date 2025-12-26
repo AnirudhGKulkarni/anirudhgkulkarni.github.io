@@ -27,9 +27,9 @@ const Hero = () => {
             <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
               {/* <span className="text-4xl font-bold text-foreground">͓̽ANI</span> */}
               <img 
-  src="/myphoto.jpg" 
+  src="/ani.png" 
   alt="Anirudh Kulkarni" 
-  className="w-32 h-32 rounded-full mx-auto shadow-lg object-contain bg-white border-4 border-acqa-500"
+  className="w-37 h-37 rounded-full mx-auto shadow-lg object-contain bg-white border-4 border-acqa-500"
 />
 
             </div>
