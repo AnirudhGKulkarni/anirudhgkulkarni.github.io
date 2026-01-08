@@ -1,6 +1,39 @@
+import React, { useRef, useState, useEffect } from 'react';
 import { ArrowDown, Github, Linkedin, Download, Eye } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Dialog, DialogTrigger, DialogContent } from '@/components/ui/dialog';
 import Experience from "./Experience";
+
+function Toolbar() {
+  const [page, setPage] = useState<number>(1);
+  const [zoom, setZoom] = useState<number>(100);
+
+  useEffect(() => {
+    const iframe = document.getElementById('resume-iframe') as HTMLIFrameElement | null;
+    if (!iframe) return;
+    // update fragment parameters that most PDF viewers respect (page & zoom)
+    const base = '/resume.pdf';
+    iframe.src = `${base}#page=${page}&zoom=${zoom}`;
+  }, [page, zoom]);
+
+  const printIframe = () => {
+    const iframe = document.getElementById('resume-iframe') as HTMLIFrameElement | null;
+    if (!iframe) return;
+    try {
+      iframe.contentWindow?.focus();
+      iframe.contentWindow?.print();
+    } catch (e) {
+      // fallback: open in new tab for printing
+      window.open('/resume.pdf', '_blank');
+    }
+  };
+
+  return (
+    <div className="flex items-center justify-center w-full">
+      <span className="font-semibold">ᗩᑎIᖇᑌᗪᕼ KᑌᒪKᗩᖇᑎI</span>
+    </div>
+  );
+}
 
 
 
@@ -56,12 +89,23 @@ const Hero = () => {
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-end items-end dark:justify-center dark:items-center pt-8">
-            <Button variant="outline" className="btn-cyber view-resume group text-white" asChild>
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="text-white">
-                <Eye className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-                View Resume
-              </a>
-            </Button>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button variant="outline" className="btn-cyber view-resume group text-white">
+                  <Eye className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                  View Resume
+                </Button>
+              </DialogTrigger>
+
+              <DialogContent className="w-[90vw] max-w-5xl h-[90vh] p-0 flex flex-col">
+                {/* Inline toolbar */}
+                <Toolbar />
+
+                <div className="flex-1">
+                  <iframe id="resume-iframe" src="/resume.pdf#toolbar=0&navpanes=0&page=1&zoom=100" title="Resume" className="w-full h-full" />
+                </div>
+              </DialogContent>
+            </Dialog>
             
             <div className="flex gap-4">
               <Button variant="outline" size="icon" className="glass-card hover:scale-110 transition-transform" asChild>

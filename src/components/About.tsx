@@ -6,7 +6,7 @@ const About = () => {
     {
       degree: "B.Tech Computer Science (Cybersecurity)",
       institution: "Garden City University, Bengaluru",
-      grade: "CGPA: 8.0",
+      grade: "CGPA: 8.57",
       note: "Top 15% of batch",
       year: "2022-2026"
     },
@@ -40,7 +40,7 @@ const About = () => {
             <div className="space-y-6 fade-in">
               <p className="text-lg text-muted-foreground leading-relaxed">
                 I'm currently pursuing a B.Tech in Computer Science with specialization in 
-                Cybersecurity at Garden City University, Bengaluru. I have a CGPA of 8.0 and 
+                Cybersecurity at Garden City University, Bengaluru. I have a CGPA of 8.57 and 
                 rank among the top 15% in my class.
               </p>
               
