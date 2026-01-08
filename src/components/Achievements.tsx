@@ -104,7 +104,7 @@ const Achievements = () => {
           {/* Achievement Stats */}
           <div className="grid md:grid-cols-4 gap-6 mt-16 fade-in">
             <div className="text-center p-6 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20">
-              <div className="text-3xl font-bold text-primary mb-2">8.0</div>
+              <div className="text-3xl font-bold text-primary mb-2">8.57</div>
               <div className="text-muted-foreground">CGPA</div>
             </div>
             <div className="text-center p-6 rounded-lg bg-gradient-to-br from-accent/10 to-primary/10 border border-accent/20">

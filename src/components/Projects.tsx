@@ -374,7 +374,7 @@ const Projects = () => {
             </div>
           </div> */}
 
-          <div className="mt-20 text-center fade-in">
+          {/* <div className="mt-20 text-center fade-in">
   <h3 className="text-3xl font-bold mb-10 text-foreground">Technical Highlights</h3>
 
   <div className="flex justify-center flex-wrap gap-8">
@@ -396,7 +396,7 @@ const Projects = () => {
       <div className="text-muted-foreground">(Location Finder)</div>
     </div>   
   </div>
-</div>       
+</div>        */}
       
     </section>
   );
