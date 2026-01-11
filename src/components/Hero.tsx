@@ -39,7 +39,7 @@ function Toolbar() {
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-end dark:justify-center overflow-hidden pt-24">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
       {/* Background: two videos toggled by theme (dark / light) */}
       <div className="absolute inset-0">
         {/* Dark mode video (shown when `dark` class is present) */}
@@ -58,37 +58,35 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 px-6 max-w-4xl mx-0 mr-8 dark:mx-auto text-right dark:text-center text-slate-900 dark:text-white">
-        <div className="space-y-6 fade-in">
+      <div className="relative z-10 px-6 max-w-4xl mx-auto text-center text-white">
+        <div className="space-y-6 fade-in bg-black/40 dark:bg-black/50 backdrop-blur-sm p-6 md:p-8 rounded-lg">
           {/* Profile Image Placeholder */}
-          <div className="w-32 h-32 ml-auto dark:mx-auto rounded-full bg-gradient-to-r from-accent to-primary p-1 float">
-            <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
-              {/* <span className="text-4xl font-bold text-foreground">͓̽ANI</span> */}
+          <div className="w-32 h-32 mx-auto rounded-full p-1 bg-gradient-to-r from-accent to-primary animate-[bounce_2s_infinite]">
+            <div className="w-full h-full rounded-full flex items-center justify-center bg-white dark:bg-slate-900 shadow-lg">
               <img
                 src="/ani.png"
                 alt="Anirudh Kulkarni"
-                className="w-37 h-37 rounded-full ml-auto dark:mx-auto shadow-lg object-contain bg-white border-4 border-acqa-500"
+                className="w-28 h-28 rounded-full object-cover"
               />
-
             </div>
           </div>
 
-          <h1 className="hero-text text-slate-900 dark:text-white">
+          <h1 className="hero-text text-white">
             Anirudha G Kulkarni
           </h1>
           
-          <p className="text-xl md:text-2xl text-slate-800/90 dark:text-white/90 font-medium">
+          <p className="text-xl md:text-2xl text-white font-medium">
             Cybersecurity Enthusiast | Tech Explorer | Gamer
           </p>
           
-          <p className="text-lg text-slate-700/90 dark:text-white/80 max-w-2xl ml-auto dark:mx-auto leading-relaxed">
+          <p className="text-lg text-white max-w-2xl mx-auto leading-relaxed">
             I'm a 8th-semester B.Tech student in Computer Science (Cybersecurity) passionate about 
             building secure, scalable, and impactful software. With hands-on experience in Python, 
             Java, ML, and web development, I love solving real-world problems through technology.
           </p>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-end items-end dark:justify-center dark:items-center pt-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
             <Dialog>
               <DialogTrigger asChild>
                 <Button variant="outline" className="btn-cyber view-resume group text-white">
@@ -108,12 +106,12 @@ const Hero = () => {
             </Dialog>
             
             <div className="flex gap-4">
-              <Button variant="outline" size="icon" className="glass-card hover:scale-110 transition-transform" asChild>
+              <Button variant="outline" size="icon" className="glass-card hover:scale-110 transition-transform bg-transparent text-white border-white/20 rounded-full p-2" asChild>
                 <a href="https://github.com/AnirudhGKulkarni" target="_blank" rel="noopener noreferrer">
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
-              <Button variant="outline" size="icon" className="glass-card hover:scale-110 transition-transform">
+                <Button variant="outline" size="icon"  className="glass-card hover:scale-110 transition-transform bg-transparent text-white border-white/20 rounded-full p-2" asChild>
                 <a href="https://www.linkedin.com/in/anirudha-g-kulkarni-16381835b" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-5 w-5" />
                 </a>
@@ -124,7 +122,7 @@ const Hero = () => {
           {/* Scroll Indicator */}
           <div className="absolute bottom--5 left-1/2 transform -translate-x-1/2 animate-bounce">
             <a href="#about">
-              <ArrowDown className="h-6 w-6 text-foreground/60" />
+              <ArrowDown className="h-6 w-6 text-white" />
             </a>
           </div>
         </div>
