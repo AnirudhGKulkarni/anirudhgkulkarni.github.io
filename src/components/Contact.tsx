@@ -41,7 +41,7 @@ const Contact = () => {
             <h2 className="text-4xl font-bold mb-4 text-foreground">Get In Touch</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto"></div>
             <p className="text-lg text-muted-foreground mt-6 max-w-2xl mx-auto">
-              I am actively seeking internship opportunities to apply my skills and contribute to real-world projects. I’d be glad to connect!
+              I am actively seeking internship and job opportunities to apply my skills and contribute to real-world projects. I’d be glad to connect!
             </p>
           </div>
 
