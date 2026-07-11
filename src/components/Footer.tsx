@@ -51,7 +51,7 @@ const Footer = () => {
     <Github className="h-5 w-5" />
   </a>
   <a
-    href="https://www.linkedin.com/in/anirudha-g-kulkarni-16381835b"
+    href="https://www.linkedin.com/in/anirudha-kulkarni-16381835b"
     target="_blank"
     rel="noopener noreferrer"
     className="p-2 rounded-full hover:bg-accent hover:text-background transition-colors"
