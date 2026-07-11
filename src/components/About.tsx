@@ -6,7 +6,7 @@ const About = () => {
     {
       degree: "B.Tech Computer Science (Cybersecurity)",
       institution: "Garden City University, Bengaluru",
-      grade: "CGPA: 8.57",
+      grade: "CGPA: 8.87",
       note: "Top 15% of batch",
       year: "2022-2026"
     },
@@ -39,22 +39,23 @@ const About = () => {
             {/* Story */}
             <div className="space-y-6 fade-in">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm currently pursuing a B.Tech in Computer Science with specialization in 
-                Cybersecurity at Garden City University, Bengaluru. I have a CGPA of 8.57 and 
-                rank among the top 15% in my class.
+              I'm a Computer Science (Cybersecurity) graduate from Garden City University, Bengaluru <br></br>
+              (CGPA: 8.87).
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Over the last four years I've gone deep into both cybersecurity and software development 
+                — building secure systems, developing ML-based tools, working on production web 
+                and mobile applications, and completing hands-on internships in cybersecurity 
+                R&D and software development.
               </p>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Over the past few years, I've built secure applications, contributed to ML-based 
-                tools, and earned more than 20 certifications in cybersecurity, cloud, AI/ML, 
-                and networking. I'm passionate about learning and applying emerging technologies 
-                in real-world projects and hackathons.
+                I bring practical experience across Python, Java, JavaScript, React, Flutter, FastAPI, 
+                AWS, and REST APIs — backed by 20+ certifications in cybersecurity, cloud, AI/ML, and networking.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I completed a 3-month cybersecurity internship as a Cyber security research and 
-                development intern, working with forensic tools and real-world security projects 
-                that enhanced my skills in security practices and vulnerability analysis.
+                I'm driven by one thing — turning complex problems into clean, working solutions.
               </p>
 
 

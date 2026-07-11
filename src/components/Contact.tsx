@@ -21,7 +21,7 @@ const Contact = () => {
       icon: Linkedin,
       label: "LinkedIn",
       value: "Connect on LinkedIn",
-      href: "https://www.linkedin.com/in/anirudha-g-kulkarni-16381835b",
+      href: "https://www.linkedin.com/in/anirudha-kulkarni-16381835b",
       color: "from-blue-600 to-blue-800"
     },
     {
@@ -49,9 +49,9 @@ const Contact = () => {
           <div className="flex justify-center">
             <div className="max-w-4xl w-full space-y-8 fade-in">
               <div>
-                <h3 className="text-2xl font-semibold mb-6 text-foreground">Looking for Internship and Job Opportunities</h3>
+                <h3 className="text-2xl font-semibold mb-6 text-foreground">Looking for Job Opportunities</h3>
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  As a dedicated aspiring engineer with a growing interest in cybersecurity, I'm seeking internship and job opportunities to apply my skills and contribute to real-world projects.
+                  As a dedicated aspiring engineer with a growing interest in cybersecurity, I'm seeking job opportunities to apply my skills and contribute to real-world projects.
                 </p>
 
                 <div className="flex items-center gap-2 text-muted-foreground mb-6">

@@ -45,7 +45,7 @@ const Achievements = () => {
       icon: Trophy,
       description: "Consistent high academic performance with recognition for outstanding results",
       highlights: [
-        "8.0 CGPA maintenance",
+        "8.8 CGPA maintenance",
         "Top 15% class ranking",
         "Top 10 scorer in 10th boards (89.12%)",
         "Academic consistency across semesters by maintaing 9.0+ CGPA for most of the semesters"
@@ -104,7 +104,7 @@ const Achievements = () => {
           {/* Achievement Stats */}
           <div className="grid md:grid-cols-4 gap-6 mt-16 fade-in">
             <div className="text-center p-6 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20">
-              <div className="text-3xl font-bold text-primary mb-2">8.57</div>
+              <div className="text-3xl font-bold text-primary mb-2">8.87</div>
               <div className="text-muted-foreground">CGPA</div>
             </div>
             <div className="text-center p-6 rounded-lg bg-gradient-to-br from-accent/10 to-primary/10 border border-accent/20">

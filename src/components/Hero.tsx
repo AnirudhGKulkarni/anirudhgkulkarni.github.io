@@ -80,9 +80,9 @@ const Hero = () => {
           </p>
           
           <p className="text-lg text-white max-w-2xl mx-auto leading-relaxed">
-            I'm a 8th-semester B.Tech student in Computer Science (Cybersecurity) passionate about 
-            building secure, scalable, and impactful software. With hands-on experience in Python, 
-            Java, ML, and web development, I love solving real-world problems through technology.
+            I'm a B.Tech Computer Science (Cybersecurity) graduate who thrives at the intersection 
+            of security and software development and passionate about building secure, scalable, and 
+            impactful software. I love solving real-world problems through technology.
           </p>
 
           {/* Action Buttons */}
@@ -112,7 +112,7 @@ const Hero = () => {
                 </a>
               </Button>
                 <Button variant="outline" size="icon"  className="glass-card hover:scale-110 transition-transform bg-transparent text-white border-white/20 rounded-full p-2" asChild>
-                <a href="https://www.linkedin.com/in/anirudha-g-kulkarni-16381835b" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/anirudha-kulkarni-16381835b/" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-5 w-5" />
                 </a>
               </Button>

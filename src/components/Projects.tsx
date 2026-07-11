@@ -1,15 +1,58 @@
-import { ExternalLink, Github, Shield, Database, MapPin } from 'lucide-react';
+import { ExternalLink, Github, Shield, Database, MapPin, GraduationCap, Brain, } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { error, time } from 'console';
 
 const Projects = () => {
   const projects = [
     {
-      title: "Final Year Project - trustNshare (ONGOING)",
+      title: "HireAI - AI Powered Hiring Platform",
+      year: "2026",
+      description: "HireAI is a production-ready AI-powered hiring platform that automatically screens and scores resumes against job descriptions.",
+      icon: Brain,
+      achievements: [
+        "AI-powered resume screening using Gemini API",
+        "Secure authentication and Firestore-based data handling",
+        "DPDP-compliant data deletion post screening",
+        "Credit and plan system with admin panel"
+      ],
+      technologies: ["React", "TypeScript", "Cloudflare Workers", "Firebase", "Gemini API"],
+      metrics: {
+        ["AI Model"]: "Gemini",
+        ["Data Handling"]: "DPDP Compliant",
+        ["Deployment"]: "Production"
+      },
+      gradient: "from-blue-500/20 to-cyan-500/20",
+      borderColor: "border-blue-500/30",
+      liveUrl: "https://hireai-do9.pages.dev",
+      iconImage: "/hireai.ico"
+    },
+    {
+      title: "Provia - Student Management System",
+      year: "2026",
+      description: "A full-featured student management system designed for educational institutions.",
+      icon: GraduationCap,
+      achievements: [
+        "Student record creation, update, and deletion",
+        "Attendance tracking and reporting",
+        "Performance and grade management",
+        "Role-based access for admin and faculty"
+      ],
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Firebase"],
+      metrics: {
+        ["Records Managed"]: "500+",
+        ["Access Control"]: "Role-based",
+        ["Data Storage"]: "MySQL"
+      },
+      gradient: "from-green-500/20 to-teal-500/20",
+      borderColor: "border-green-500/30",
+      liveUrl: "https://provia.techknowdayasolutions.in/",
+      iconImage: "/provia.ico"
+    },
+    {
+      title: "Final Year Project - trustNshare",
       year: "2025",
-      description: "trustNshare is an ongoing final-year project focused on building a secure data-sharing platform for small-scale organizations. The system is designed with policy-based access control to regulate how data is shared and accessed.",
+      description: "trustNshare is my final-year project that focuses on a secure data-sharing platform for small-scale organizations.",
       icon: Shield,
       achievements: [
         "3+ access control and sharing policies",
@@ -75,7 +118,7 @@ const Projects = () => {
     {
       title: "Pharmacy Management System", 
       year: "2024",
-      description: "Comprehensive inventory management solution built with Java and MySQL, streamlining pharmacy operations and reducing manual errors.",
+      description: "Comprehensive inventory management solution built with Java and MySQL.",
       icon: Database,
       achievements: [
         "Managed 200+ inventory items (SKUs)",
@@ -96,7 +139,7 @@ const Projects = () => {
     {
       title: "Location Finder from Photo",
       year: "2023",
-      description: "Innovative ML tool developed during a 48-hour hackathon that extracts geographical location data from uploaded images using advanced computer vision.",
+      description: "Innovative ML tool that extracts geographical location data from uploaded images using advanced computer vision.",
       icon: MapPin,
       achievements: [
         "90% accuracy over 300+ images",
@@ -128,17 +171,18 @@ const Projects = () => {
             </p>
           </div>
 
-          {/* Standalone final-year project first */}
-          {projects.length > 0 && (() => {
-            const project = projects[0];
-            const Icon = project.icon;
-            return (
-              <div className="mb-8">
-                <Card className={`project-card group overflow-hidden bg-gradient-to-br ${project.gradient} border-2 ${project.borderColor}`}>
+          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3 auto-rows-fr items-stretch">
+            {projects.map((project, index) => {
+              const Icon = project.icon;
+              return (
+                <Card
+                  key={index}
+                  className={`project-card group h-full overflow-hidden bg-gradient-to-br ${project.gradient} border-2 ${project.borderColor} flex flex-col`}
+                >
                   <CardHeader className="pb-4">
                     <div className="flex items-center justify-between mb-4">
                       {project.iconImage ? (
-                        <img src={project.iconImage} alt={`${project.title} icon`} className="w-16 h-16 object-contain" />
+                        <img src={project.iconImage} alt={`${project.title} icon`} className="w-12 h-12 object-contain shrink-0" />
                       ) : (
                         <div className={`w-12 h-12 rounded-lg bg-gradient-to-r from-primary to-accent flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                           <Icon className="h-6 w-6 text-white" />
@@ -153,8 +197,8 @@ const Projects = () => {
                     </CardTitle>
                   </CardHeader>
 
-                  <CardContent className="space-y-6">
-                    <p className="text-muted-foreground leading-relaxed">
+                  <CardContent className="flex flex-1 flex-col space-y-6">
+                    <p className="text-muted-foreground leading-relaxed line-clamp-4 min-h-[6rem]">
                       {project.description}
                     </p>
 
@@ -190,122 +234,23 @@ const Projects = () => {
                       </div>
                     </div>
 
-                    <div className="pt-4 flex gap-3">
-                      <Button
-                        size="sm"
-                        className="flex-1 bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary"
-                        asChild
-                      >
-                        <a
-                          href={project.codeUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Github className="h-4 w-4 mr-2" />
-                          Code
-                        </a>
-                      </Button>
-
-                      {project.liveUrl && (
+                    <div className="pt-4 flex gap-3 mt-auto">
+                      {project.codeUrl && (
                         <Button
                           size="sm"
-                          variant="outline"
-                          className="flex-1"
+                          className="flex-1 bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary"
                           asChild
                         >
                           <a
-                            href={project.liveUrl}
+                            href={project.codeUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <ExternalLink className="h-4 w-4 mr-2" />
-                            Live
+                            <Github className="h-4 w-4 mr-2" />
+                            Code
                           </a>
                         </Button>
                       )}
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            );
-          })()}
-
-          {/* Other projects side-by-side */}
-          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {projects.slice(1).map((project, index) => {
-              const Icon = project.icon;
-              return (
-                <Card key={index} className={`project-card group overflow-hidden bg-gradient-to-br ${project.gradient} border-2 ${project.borderColor}`}>
-                  <CardHeader className="pb-4">
-                    <div className="flex items-center justify-between mb-4">
-                      {project.iconImage ? (
-                        <img src={project.iconImage} alt={`${project.title} icon`} className="w-15 h-15 object-contain" />
-                      ) : (
-                        <div className={`w-12 h-12 rounded-lg bg-gradient-to-r from-primary to-accent flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                          <Icon className="h-6 w-6 text-white" />
-                        </div>
-                      )}
-                      <span className="text-sm text-muted-foreground bg-background/50 px-3 py-1 rounded-full">
-                        {project.year}
-                      </span>
-                    </div>
-                    <CardTitle className="text-xl group-hover:text-accent transition-colors">
-                      {project.title}
-                    </CardTitle>
-                  </CardHeader>
-
-                  <CardContent className="space-y-6">
-                    <p className="text-muted-foreground leading-relaxed">
-                      {project.description}
-                    </p>
-
-                    <div className="grid grid-cols-3 gap-4 p-4 bg-background/30 rounded-lg">
-                      {Object.entries(project.metrics).map(([key, value]) => (
-                        <div key={key} className="text-center">
-                          <div className="font-bold text-accent text-lg">{value}</div>
-                          <div className="text-xs text-muted-foreground capitalize">{key}</div>
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="space-y-2">
-                      <h4 className="font-semibold text-foreground">Key Achievements:</h4>
-                      <ul className="space-y-1">
-                        {project.achievements.map((achievement, i) => (
-                          <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
-                            <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0"></span>
-                            {achievement}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div className="space-y-3">
-                      <h4 className="font-semibold text-foreground">Technologies:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {project.technologies.map((tech) => (
-                          <Badge key={tech} variant="secondary" className="text-xs hover:bg-accent/20 transition-colors">
-                            {tech}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="pt-4 flex gap-3">
-                      <Button
-                        size="sm"
-                        className="flex-1 bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary"
-                        asChild
-                      >
-                        <a
-                          href={project.codeUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Github className="h-4 w-4 mr-2" />
-                          Code
-                        </a>
-                      </Button>
 
                       {project.liveUrl && (
                         <Button
@@ -329,28 +274,42 @@ const Projects = () => {
                 </Card>
               );
             })}
+
+            <Card className="project-card project-blink group h-full overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20 border-2 border-accent/40 flex flex-col">
+              <CardContent className="flex flex-1 flex-col items-center justify-center text-center gap-4 py-10">
+                <div className="w-16 h-16 rounded-full border border-accent/30 bg-background/40 flex items-center justify-center">
+                  <div className="w-3 h-3 rounded-full bg-accent shadow-[0_0_18px_hsl(var(--accent)/0.7)]" />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-2xl font-bold text-foreground">More Projects Coming Soon</h3>
+                  <p className="text-sm text-muted-foreground max-w-xs mx-auto leading-relaxed">
+                    Additional work is currently in progress and will be added here shortly.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
           </div>
       
 
           <div className="text-center mt-12 fade-in">
-  <p className="text-muted-foreground mb-4">
-    Interested in seeing more of my work?
-  </p>
-  <Button
-    variant="outline"
-    className="group"
-    asChild
-  >
-    <a
-      href="https://github.com/AnirudhGKulkarni"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Github className="h-4 w-4 mr-2 group-hover:scale-110 transition-transform" />
-      View All Projects on GitHub
-    </a>
-  </Button>
-</div>
+            <p className="text-muted-foreground mb-4">
+              Interested in seeing more of my work?
+            </p>
+            <Button
+              variant="outline"
+              className="group"
+              asChild
+            >
+              <a
+                href="https://github.com/AnirudhGKulkarni"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="h-4 w-4 mr-2 group-hover:scale-110 transition-transform" />
+                View All Projects on GitHub
+              </a>
+            </Button>
+          </div>
 
                     
         </div>

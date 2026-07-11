@@ -1,37 +1,49 @@
-import { Code, Database, Shield, Users } from 'lucide-react';
+import { BadgeCheck, Code2, Globe2, Layers3, PenTool, ShieldCheck, UsersRound, Wrench } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const Skills = () => {
   const skillCategories = [
     {
       title: "Programming Languages",
-      icon: Code,
-      skills: ["C", "C++", "Python", "Java", "HTML", "CSS", "JavaScript"],
-      color: "text-blue-500"
+      icon: Code2,
+      skills: ["C", "C++", "Python", "Java", "JavaScript", "TypeScript", "HTML", "CSS", "SQL"],
+      color: "text-blue-400"
+    },
+    {
+      title: "Frameworks & Technologies",
+      icon: Layers3,
+      skills: ["React", "Flutter", "FastAPI", "Firebase", "Node.js", "REST APIs", "RESTful API Design"],
+      color: "text-violet-400"
     },
     {
       title: "Tools & Platforms", 
-      icon: Database,
-      skills: ["VMware", "Virtual Box", "Git", "MySQL", "Jupyter Notebook"],
-      color: "text-green-500"
-    },
+      icon: Wrench,
+      skills: ["Git", "MySQL", "VMware", "VirtualBox", "Jupyter Notebook", "Linux", "Cloudflare", "AWS", "Android", "Apple Developer"],
+      color: "text-emerald-400"
+    },  
     {
-      title: "Technologies",
-      icon: Shield,
-      skills: ["Machine Learning", "Data Analysis", "Full-stack Web Development", "Firebase"],
-      color: "text-purple-500"
+      title: "Domains",
+      icon: Globe2,
+      skills: ["Cybersecurity", "Full-Stack Development", "Machine Learning", "Mobile App Development"],
+      color: "text-cyan-400"
     },
     {
       title: "Security Concepts",
-      icon: Shield,
-      skills: ["Authentication", "Authorization", "Access Control", "Secure Web Applications"],
-      color: "text-purple-500"
+      icon: ShieldCheck,
+      skills: ["Authentication", "Authorization", "Encryption", "Access Control", "Secure Web Applications"],
+      color: "text-rose-400"
+    },
+    {
+      title: "UI/UX",
+      icon: PenTool,
+      skills: ["Responsive Design", "User Interface Design", "User Experience Design"],
+      color: "text-amber-400"
     },
     {
       title: "Soft Skills",
-      icon: Users,
+      icon: UsersRound,
       skills: ["Leadership", "Teamwork", "Communication", "Problem-solving"],
-      color: "text-orange-500"
+      color: "text-orange-400"
     }
   ];
 
@@ -40,40 +52,40 @@ const Skills = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 fade-in">
-            <h2 className="text-4xl font-bold mb-4 text-foreground">Skills & Expertise</h2>
+            <div className="inline-flex items-center justify-center gap-3 mb-4 text-foreground">
+              <BadgeCheck className="h-8 w-8 text-accent" />
+              <h2 className="text-4xl font-bold">Skills & Expertise</h2>
+            </div>
             <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto"></div>
             <p className="text-lg text-muted-foreground mt-6 max-w-2xl mx-auto">
               A comprehensive toolkit built through academic learning, hands-on projects, and continuous exploration
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {skillCategories.map((category, index) => (
-              <Card key={index} className="project-card group">
+              <Card key={index} className="project-card group overflow-hidden">
                 <CardHeader className="text-center pb-4">
-                  <div className={`w-16 h-16 mx-auto rounded-full bg-gradient-to-r from-primary/20 to-accent/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className="w-16 h-16 mx-auto rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-105">
                     <category.icon className={`h-8 w-8 ${category.color}`} />
                   </div>
-                  <CardTitle className="text-xl">{category.title}</CardTitle>
+                  <CardTitle className="text-xl leading-tight">{category.title}</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <div className="space-y-3">
+                <CardContent className="space-y-2">
+                  <div className="mb-3 h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                     {category.skills.map((skill, skillIndex) => (
-                      <div key={skillIndex} className="group/skill">
-                        <div className="flex justify-between items-center mb-1">
-                          <span className="text-sm font-medium text-foreground group-hover/skill:text-accent transition-colors">
+                      <div
+                        key={skillIndex}
+                        className="group/skill flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 px-3 py-2.5 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/25 hover:bg-white/10"
+                      >
+                        <div className="flex min-w-0 items-center gap-3">
+                          <span className="h-2.5 w-2.5 rounded-full bg-gradient-to-r from-primary to-accent shadow-[0_0_12px_rgba(59,130,246,0.35)] transition-transform duration-300 group-hover/skill:scale-125" />
+                          <span className="truncate text-sm font-medium text-foreground transition-colors duration-300 group-hover/skill:text-accent">
                             {skill}
                           </span>
                         </div>
-                        <div className="w-full bg-muted rounded-full h-2">
-                          <div 
-                            className="bg-gradient-to-r from-primary to-accent h-2 rounded-full transition-all duration-500 group-hover:from-accent group-hover:to-primary"
-                            style={{
-                              width: `${85 + Math.floor(Math.random() * 15)}%`,
-                              animationDelay: `${skillIndex * 0.1}s`
-                            }}
-                          ></div>
-                        </div>
+                        <span className="ml-auto h-1.5 w-1.5 rounded-full bg-accent/60 opacity-60 transition-all duration-300 group-hover/skill:opacity-100" />
                       </div>
                     ))}
                   </div>

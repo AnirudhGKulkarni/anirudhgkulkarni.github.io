@@ -5,6 +5,30 @@ import { Card, CardContent } from '@/components/ui/card';
 const Experience = () => {
   const experiences = [
     {
+      role: "Software Development Intern",
+      company: "MedAiLocker Private Limited",
+      duration: "May 2026 - July 2026",
+      description: [
+        "Developed and maintained production web and mobile applications for an AI-powered medical records platform using React and Flutter.",
+        "Built and integrated RESTful APIs and FastAPI-based backend services with end-to-end data flow on AWS infrastructure.",
+        "Deployed and managed application builds across Android (Google Play) and Apple Developer platforms end to end.",
+        "Implemented 10+ UI components and core features including API integrations, form validation, and secure health data workflows."
+      ],
+      certificateLink: "https://drive.google.com/drive/folders/19eJFJd_y3yab875UNP7c08YFwKLoBL7e?usp=sharing"
+    },
+    {
+      role: "Cybersecurity Intern",
+      company: "Codec Technologies",
+      duration: "Jan 2026 - Apr 2026",
+      description: [
+        "Completed hands-on training across incident response, cryptography, web security, and vulnerability detection.",
+        "Built practical projects simulating real-world threat scenarios using both offensive and defensive security techniques.",
+        "Applied cybersecurity concepts across multiple domains including secure system development and threat analysis.",
+        "Gained practical exposure to industry-standard security tools and methodologies."
+      ],
+      certificateLink: "https://drive.google.com/drive/folders/19eJFJd_y3yab875UNP7c08YFwKLoBL7e?usp=sharing"
+    },
+    {
       role: "Cybersecurity Research and Development Intern",
       company: "Zetpeak",
       duration: "Aug 2025 - Nov 2025",

@@ -196,6 +196,21 @@
     box-shadow: var(--shadow-elegant);
   }
 
+  .project-blink {
+    animation: projectBlink 1.8s ease-in-out infinite;
+  }
+
+  @keyframes projectBlink {
+    0%, 100% {
+      opacity: 1;
+      box-shadow: var(--shadow-card), 0 0 0 0 hsl(var(--accent) / 0.12);
+    }
+    50% {
+      opacity: 0.88;
+      box-shadow: var(--shadow-elegant), 0 0 28px 4px hsl(var(--accent) / 0.22);
+    }
+  }
+
   /* Skill badge */
   .skill-badge {
     @apply px-4 py-2 rounded-full font-medium transition-all duration-300;
